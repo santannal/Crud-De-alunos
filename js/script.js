@@ -1,35 +1,7 @@
-var students = [
-    {
-        id: 1,
-        name: "Glauco",
-        email: "glauco@email.com",
-        telephone: "11973631403",
-        course: 1,
-        morning: true,
-        afternoon: false,
-        night: false,
-    },
-    {
-        id: 2,
-        name: "Luis",
-        email: "luiso@email.com",
-        telephone: "1191231333",
-        course: 2,
-        morning: false,
-        afternoon: true,
-        night: false,
-    },
-    {
-        id: 3,
-        name: "Leonardo",
-        email: "leo@email.com",
-        telephone: "119321321",
-        course: 3,
-        morning: false,
-        afternoon: false,
-        night: true,
-    },
-];
+//masks
+$("#inputTelefone").mask("(99) 9999-99999");
+
+var students = [];
 
 var courses = [
     { id: 1, name: "Java" },
@@ -60,7 +32,7 @@ function save() {
     addNewRow(op);
     students.push(op);
 
-    //document.getElementById("idformulario").reset();
+    document.getElementById("idformulario").reset();
 }
 
 
