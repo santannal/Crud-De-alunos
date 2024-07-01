@@ -21,7 +21,7 @@
             <div class="display-6">Formulário de Cadastro:</div>
             <div class="row mt-3">
                 <div class="col-md-10 offset-md-1">
-                    <form>
+                    <form onsubmit="save(); return false;" id="idformulario">
                         <div class="row mb-3 mt-3">
                             <label for="inputName" class="col-sm-2 col-form-label fs-5">Nome:</label>
                             <div class="col-sm-10">
@@ -39,9 +39,9 @@
                             </div>
                         </div>
                         <div class="row mb-3 mt-3">
-                            <label for="inputName" class="col-sm-2 col-form-label fs-5">Cursos:</label>
+                            <label class="col-sm-2 col-form-label fs-5">Cursos:</label>
                             <div class="col-sm-4">
-                                <select class="form-select" aria-label="Default select example" required>
+                                <select class="form-select" aria-label="Default select example" id="selectCurso">
                                     <option selected value="">Selecione -</option>
                                     <option value="1">Java</option>
                                     <option value="2">Angular</option>
@@ -51,25 +51,25 @@
                         </div>
 
                         <div class="row mb-3 mt-3">
-                            <label for="inputName" class="col-sm-2 col-form-label fs-5">Turno:</label>
+                            <label class="col-sm-2 col-form-label fs-5">Turno:</label>
                             <div class="col-sm-4 mt-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                <div class="form-check" id="radios">
+                                    <input class="form-check-input" type="radio" value="1" name="flexRadioPeriodo"
                                         id="radioManha">
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         Manhã
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioTarde"
-                                        checked>
+                                    <input class="form-check-input" value="2" type="radio" name="flexRadioPeriodo"
+                                        id="radioTarde" checked>
                                     <label class="form-check-label" for="flexRadioDefault2">
                                         Tarde
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioNoite"
-                                        checked>
+                                    <input class="form-check-input" value="3" type="radio" name="flexRadioPeriodo"
+                                        id="radioNoite" checked>
                                     <label class="form-check-label" for="flexRadioDefault3">
                                         Noite
                                     </label>
