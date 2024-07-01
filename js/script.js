@@ -42,13 +42,17 @@ function addNewRow(op) {
     var newRow = table.insertRow();
 
     var idNode = document.createTextNode(op.id);
-    newRow.insertCell().appendChild(idNode);
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(idNode);
 
     var nameNode = document.createTextNode(op.name);
     newRow.insertCell().appendChild(nameNode);
 
     var emailNode = document.createTextNode(op.email);
-    newRow.insertCell().appendChild(emailNode);
+    cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(emailNode);
 
     var telephoneNode = document.createTextNode(op.telephone);
     newRow.insertCell().appendChild(telephoneNode);
